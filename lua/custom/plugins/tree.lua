@@ -20,8 +20,8 @@ return {
       dotfiles = true,
     },
   },
-  init = function()
-    vim.keymap.set('n', '<C-n>', vim.cmd.NvimTreeToggle, { desc = 'Toggle tree' })
-    vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeFocus, { desc = 'Focus tree' })
-  end,
+  keys = {
+    { '<C-n>', vim.cmd.NvimTreeToggle, desc = 'Toggle tree' },
+    { '<leader>e', vim.cmd.NvimTreeFocus, desc = 'Focus tree' },
+  },
 }
