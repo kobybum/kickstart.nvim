@@ -4,9 +4,9 @@ local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 return {
   'jose-elias-alvarez/null-ls.nvim',
   event = 'VeryLazy',
-  setup = function()
-    local null_ls = require 'null_ls'
-    null_ls.setup {
+  opts = function()
+    local null_ls = require 'null-ls'
+    return {
       source = {
         -- typescript
         null_ls.builtins.diagnostics.eslint,

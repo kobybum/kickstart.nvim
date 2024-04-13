@@ -17,11 +17,11 @@ return {
       group_empty = true,
     },
     filters = {
-      dotfiles = true,
+      dotfiles = false,
     },
   },
   keys = {
     { '<C-n>', vim.cmd.NvimTreeToggle, desc = 'Toggle tree' },
-    { '<leader>e', vim.cmd.NvimTreeFocus, desc = 'Focus tree' },
+    { '<leader>e', vim.cmd.NvimTreeFindFile, desc = 'Find file in tree' },
   },
 }
